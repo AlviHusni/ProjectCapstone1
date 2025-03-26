@@ -1,3 +1,4 @@
+#Menu display can be changed however you see fit
 def menu():
     print("Big Jim & Co.'s Car Rental\n======================================\n")
     print("1. Show Auto Products")
@@ -8,15 +9,15 @@ def menu():
     print("0. Exit")
     print("\n")
 
-List_Barang = ["Chevrolet Cruze","Nissan Altima","Toyota Corolla","Toyota Camry","Chrysler 200"]
-List_Stok = [5,10,7,3,8]
-List_Harga = [44.99,40.75,47.99,67.33,84.99]
+List_Barang = ["Chevrolet Cruze","Nissan Altima","Toyota Corolla","Toyota Camry","Chrysler 200"] #Insert product name here
+List_Stok = [5,10,7,3,8] #Insert available stock here
+List_Harga = [44.99,40.75,47.99,67.33,84.99] #Insert prices here
 
 def productlist():
     print("\n")
     print("    No. | Vehicle Name\t\t| Stock\t| Rate/day\n")
     for i,option in enumerate(List_Barang):
-        print("{:5}\t| {:15}\t| {:<3}\t| ${} /day.".format(i+1,option,List_Stok[i],List_Harga[i]))
+        print("{:5}\t| {:15}\t| {:<3}\t| ${} /day.".format(i+1,option,List_Stok[i],List_Harga[i])) #You may change your product list display here
 
 menu()
 option = int(input("Select Option: "))
@@ -40,7 +41,7 @@ while option !=0:
             print("Rental Cancelled")
     elif option == 3:
         Password = input("Enter Password: ")
-        if Password == "BigJim4499":
+        if Password == "BigJim4499": #Change Password here
             New_ProductName = input("Insert Product Here: ")
             List_Barang.append(New_ProductName)
             New_ProductName_Stock = int(input("Insert Number of Product Here: "))
@@ -52,7 +53,7 @@ while option !=0:
             print("Incorrect Password")
     elif option == 4:
         Password = input("Enter Password: ")
-        if Password == "BigJim4499":
+        if Password == "BigJim4499": #Change Password here
             ChooseUpdate_Product = int(input("Insert Product Index Choice to Update: "))-1
             Update_ProductStock = input("Insert Stock Update (If no update, insert'-'): ")
             if Update_ProductStock != "-":
@@ -65,7 +66,7 @@ while option !=0:
             print("Incorrect Password")
     elif option == 5:
         Password = input("Enter Password: ")
-        if Password == "BigJim4499":
+        if Password == "BigJim4499": #Change Password here
             Remove_ProductName = int(input("Insert Product Index Choice to Delete: "))-1
             del List_Barang[Remove_ProductName]
             del List_Stok[Remove_ProductName]
